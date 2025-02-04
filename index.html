@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Ti, Saruvi ❤️</title>
     <style>
-        /* 🔹 Estilos Generales */
-        body {
+                /* 🔹 Estilos Generales */
+                body {
             font-family: Arial, sans-serif;
             background-color: #ffe6e6;
             text-align: center;
@@ -22,8 +22,8 @@
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             display: inline-block;
-            max-width: 90%;
-            width: 600px;
+            max-width: 90%; /* Se ajusta a la pantalla */
+            width: 600px; /* Buen tamaño en pantallas grandes */
             position: relative;
         }
 
@@ -55,6 +55,7 @@
             color: #b30000;
         }
 
+        /* 🔹 Imágenes */
         .gallery img {
             width: 100%;
             max-width: 300px;
@@ -62,92 +63,11 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
-
-.music-player {
-    margin-top: 20px;
-    background: #2d2d2d; /* Fondo más suave pero oscuro */
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 90%;
-    width: 400px;
-    margin: 20px auto;
-}
-
-.music-player button {
-    background-color: #d63384; /* El mismo color que el título */
-    border: none;
-    color: white;
-    padding: 12px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 20px;
-}
-
-.music-player button:hover {
-    background-color: #e066aa; /* Un color más claro al pasar el mouse */
-}
-
-.music-player input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 8px;
-    background: #ffd1e1; /* Fondo suave para el control */
-    border-radius: 5px;
-    outline: none;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-}
-
-.music-player input[type="range"]:hover {
-    opacity: 1;
-}
-
-.music-player input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #d63384; /* Usamos el mismo color que los botones */
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.music-player input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: #e066aa; /* Color más suave al pasar el mouse */
-}
-
-.music-player input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #d63384;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.music-player input[type="range"]::-moz-range-thumb:hover {
-    background-color: #e066aa;
-}
-
 
         /* 🔹 GIFs de los gatos */
         .corner-gif {
             position: absolute;
-            width: 100px;
+            width: 100px; /* Ajusta tamaño en escritorio */
             height: auto;
             z-index: 10;
         }
@@ -171,6 +91,101 @@
             color: #555;
             font-style: italic;
         }
+
+        /* 🔹 Ajustes Responsivos para Celulares */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 { font-size: 20px; }
+            p { font-size: 14px; }
+
+            .corner-gif {
+                width: 70px; /* Reduce tamaño en móviles */
+            }
+        }
+
+        /* 🔹 Reproductor de Música */
+        .music-player {
+            margin-top: 20px;
+            background: #2d2d2d; /* Fondo más suave pero oscuro */
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 90%;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        .music-player button {
+            background-color: #d63384; /* El mismo color que el título */
+            border: none;
+            color: white;
+            padding: 12px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 20px;
+        }
+
+        .music-player button:hover {
+            background-color: #e066aa; /* Un color más claro al pasar el mouse */
+        }
+
+        .music-player input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #ffd1e1; /* Fondo suave para el control */
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .music-player input[type="range"]:hover {
+            opacity: 1;
+        }
+
+        .music-player input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #d63384; /* Usamos el mismo color que los botones */
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .music-player input[type="range"]::-webkit-slider-thumb:hover {
+            background-color: #e066aa; /* Color más suave al pasar el mouse */
+        }
+
+        .music-player input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #d63384;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .music-player input[type="range"]::-moz-range-thumb:hover {
+            background-color: #e066aa;
+        }
+
     </style>
 </head>
 <body>
