@@ -22,8 +22,8 @@
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             display: inline-block;
-            max-width: 90%; /* Se ajusta a la pantalla */
-            width: 600px; /* Buen tamaño en pantallas grandes */
+            max-width: 90%;
+            width: 600px;
             position: relative;
         }
 
@@ -55,7 +55,6 @@
             color: #b30000;
         }
 
-        /* 🔹 Imágenes */
         .gallery img {
             width: 100%;
             max-width: 300px;
@@ -64,10 +63,92 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* 🎵 Estilos del reproductor */
+        /* 🎵 Estilos del reproductor */
+.music-player {
+    margin-top: 20px;
+    background: #2d2d2d; /* Fondo más suave pero oscuro */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.music-player button {
+    background-color: #d63384; /* El mismo color que el título */
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.music-player button:hover {
+    background-color: #e066aa; /* Un color más claro al pasar el mouse */
+}
+
+.music-player input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ffd1e1; /* Fondo suave para el control */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.music-player input[type="range"]:hover {
+    opacity: 1;
+}
+
+.music-player input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #d63384; /* Usamos el mismo color que los botones */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.music-player input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #e066aa; /* Color más suave al pasar el mouse */
+}
+
+.music-player input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #d63384;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.music-player input[type="range"]::-moz-range-thumb:hover {
+    background-color: #e066aa;
+}
+
+
         /* 🔹 GIFs de los gatos */
         .corner-gif {
             position: absolute;
-            width: 100px; /* Ajusta tamaño en escritorio */
+            width: 100px;
             height: auto;
             z-index: 10;
         }
@@ -91,24 +172,9 @@
             color: #555;
             font-style: italic;
         }
-
-        /* 🔹 Ajustes Responsivos para Celulares */
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
-
-            h1 { font-size: 20px; }
-            p { font-size: 14px; }
-
-            .corner-gif {
-                width: 70px; /* Reduce tamaño en móviles */
-            }
-        }
     </style>
 </head>
 <body>
-
     <!-- GIFs en las esquinas -->
     <img class="corner-gif top-left" src="https://media.tenor.com/Hkh0USs2v5EAAAAj/love-you-roar.gif" alt="Gato San Valentín 1">
     <img class="corner-gif top-right" src="https://i.pinimg.com/originals/3b/7d/fb/3b7dfba343949b0c4ab7df45bf9543ab.gif" alt="Gato San Valentín 2">
@@ -119,24 +185,25 @@
     <div class="container">
         <h1>Para Mi Gorda, Saruvi ❤️</h1>
         <p>Cada día tu amistad es un regalo. Eres una persona increíble y especial.</p>
-        <p>
-            Saruvi, he estado pensando en nosotros y en todo lo que hemos compartido. Sé que las cosas no han estado bien, 
-            y lamento si te lastimé de alguna manera. Tu amistad es muy importante para mí, y no quiero que esto nos aleje para siempre.
-        </p>
-        <p>
-            Eres una persona especial, llena de bondad y alegría, y valoro cada momento que hemos pasado juntos. 
-            Si estás dispuesta, me encantaría hablar y resolver esto juntos. Creo que nuestra amistad es más fuerte que cualquier problema.
-        </p>
-        <p>
-            Te mando un abrazo fuerte y espero que podamos sanar esto. Con cariño, Brayan ❤️
-        </p>
+        <p>Saruvi, he estado pensando en nosotros y en todo lo que hemos compartido. Sé que las cosas no han estado bien, y lamento si te lastimé de alguna manera. Tu amistad es muy importante para mí, y no quiero que esto nos aleje para siempre.</p>
+        <p>Eres una persona especial, llena de bondad y alegría, y valoro cada momento que hemos pasado juntos. Si estás dispuesta, me encantaría hablar y resolver esto juntos. Creo que nuestra amistad es más fuerte que cualquier problema.</p>
+        <p>Te mando un abrazo fuerte y espero que podamos sanar esto. Con cariño, Brayan ❤️</p>
         <p class="heart">❤️</p>
         <p class="message">Siempre contarás conmigo en cada paso de la vida.</p>
 
-        <!-- Imagen de Recuerdos -->
+        <!-- Imagen de Recuerdo -->
         <div class="gallery">
             <img src="Imagen de WhatsApp 2025-02-01 a las 10.58.10_42c99fe0.jpg" alt="Recuerdo 1">
         </div>
+
+        <!-- Reproductor de Música -->
+        <div class="music-player">
+            <button onclick="rewind()">⏪</button>
+            <input type="range" id="progress" value="0" step="1">
+            <button onclick="togglePlay()">▶️/⏸️</button>
+            <button onclick="forward()">⏩</button>
+        </div>
+        <audio id="audio" src="SARU.mp3"></audio>
     </div>
 
     <!-- Pie de página -->
@@ -144,5 +211,33 @@
         <p class="funny-text">Si alguna vez te pierdes, no te preocupes... ¡te buscaré con Google Maps! 😆</p>
     </footer>
 
+    <script>
+        let audio = document.getElementById("audio");
+        let progress = document.getElementById("progress");
+
+        audio.addEventListener("timeupdate", () => {
+            progress.value = (audio.currentTime / audio.duration) * 100;
+        });
+
+        progress.addEventListener("input", () => {
+            audio.currentTime = (progress.value / 100) * audio.duration;
+        });
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function forward() {
+            audio.currentTime += 10;
+        }
+
+        function rewind() {
+            audio.currentTime -= 10;
+        }
+    </script>
 </body>
 </html>
